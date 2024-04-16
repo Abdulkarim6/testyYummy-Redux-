@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: auto;
+  /* width: 1280px; */
+}
+
+a.active{
+  /* color: rgb(59 130 246)!important; */
+  color: rgb(240, 15, 98)!important;
+  font: 600;
+  background-color: inherit!important;
+}
+
+.featured-item{
+  background-image: url('./assets/home/featured.jpg');
+}
+.infoBg{
+  background-image: url('./assets/home/chef-special.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.MenuBanner{
+  background-image: url('./assets/menu/menu-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+  
+  .box {
+	display: grid;
+	place-content: center;
+	color: white;
+	text-shadow: 0 1px 0 #000;
+	--border-angle: 0turn;
+	--main-bg: conic-gradient(from var(--border-angle), #213, #112 5%, #112 60%, #213 95%);
+	border: solid 5px transparent;
+	--gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+	background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+	background-position: center center;
+	-webkit-animation: bg-spin 3s linear infinite;
+			animation: bg-spin 3s linear infinite;
+  }
+  @-webkit-keyframes bg-spin {
+	to {
+	  --border-angle: 1turn;
+	}
+  }
+  @keyframes bg-spin {
+	to {
+	  --border-angle: 1turn;
+	}
+  }
+  .box:hover {
+	-webkit-animation-play-state: paused;
+			animation-play-state: paused;
+  }
+  @property --border-angle {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0turn;
+  }
