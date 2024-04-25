@@ -1,3 +1,6 @@
+import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
 import useMenu from "../../hooks/useMenu";
 import MenuItem from "./MenuItem";
@@ -15,19 +18,16 @@ const FavouriteMenu = () => {
 
   const popularMenus = menus?.filter((menu) => menu.category === "popular");
 
-  const [products, setProducts] = useState([]);
-
   useEffect(() => {
-    fetch("shortMeal.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+    AOS.init();
+  }, [])
 
   return (
-    <section className="mb-5">
-      <div className="flex flex-col justify-center items-center my-5">
+    <section
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    className="mb-5">
+      <div className="flex flex-col justify-center items-center ">
         <SectionTitle
           title="Our Special Menu"
           subTitle="---check it out---"
@@ -43,26 +43,6 @@ const FavouriteMenu = () => {
         <button className="text-lg font-semibold p-1 border-b-4 rounded-md hover:border-blue-500">View All Menu</button>
       </div>
 
-      <section className='mt-8'>
-            <h2 className='text-2xl font-medium text-sky-500 mb-6'>Services We Provide</h2>
-            <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-4 m-2'>
-            {
-                products[1]?.meals?.map((product, i) => 
-                // console.log(product)
-                <div key={i}>
-                  <div className="card shadow-md">
-                      <figure className="">
-                          <img src={product?.strMealThumb} alt="" />
-                      </figure>
-                      <div className="card-body items-center">
-                          <h2 className="card-title">{product?.strCategory}</h2>
-                      </div>
-                  </div>
-              </div>
-              )
-            }
-            </div>
-        </section>
     </section>
   );
 };

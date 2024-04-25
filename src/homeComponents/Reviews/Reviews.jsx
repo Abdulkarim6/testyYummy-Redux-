@@ -28,7 +28,7 @@ const Reviews = () => {
 
       <Swiper
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         navigation={true}
@@ -36,10 +36,10 @@ const Reviews = () => {
         className="mySwiper"
       >
         {reviews?.map((review, i) => (
-          <SwiperSlide key={i} className="text-left px-16">
-            <div className="pt-10">
+          <SwiperSlide key={i} className="text-left px-16 flex ">
+            <div className="">
               <div className="flex items-end">
-                <h3 className="text-2xl font-medium text-blue-500 mr-2">{review.name}</h3>
+                <h3 className="text-xl md:text-2xl font-medium text-blue-500 mr-2">{review.name}</h3>
                 <Rating style={{ maxWidth: 130 }} value={review.rating} readOnly />
               </div>
               <p>{review.details}</p>

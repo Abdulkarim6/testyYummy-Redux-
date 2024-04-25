@@ -10,17 +10,9 @@ import img2 from "../../assets/banner/Beef.jpg";
 import img3 from "../../assets/banner/Dessert.jpg";
 import img4 from "../../assets/banner/Breakfast.jpg";
 import img5 from "../../assets/banner/Vegetarian.jpg";
-// import img6 from "../../assets/home/06.png";
 
 const saveimgs  = [img1,img2, img3, img4, img5]
 
-// const images = [
-//   {
-//     imgLink: "https://www.themealdb.com/images/media/meals/pkopc31683207947.jpg",
-//     title: "Beef Asado",
-//     subTitle: "",
-//   }
-// ];
 
 const Banner = () => {
   return (
@@ -38,7 +30,7 @@ const Banner = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="h-[94vh]"
+        // className="h-[44vh] md:h-[60vh] lg:h-[94vh]"
       >
 
         {saveimgs?.map((img, i) => (

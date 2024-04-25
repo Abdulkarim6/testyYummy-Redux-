@@ -1,42 +1,27 @@
-/* mr-0 h-[94vh] w-9/12 */
-/* .banner{
-  background-image: url("../../assets/home/bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
 .swiper {
   width: 100%;
-  /* height: 100%; */
 }
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  /* background: #fff; */
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* .swiper-pagination{
-  margin-top: -50px!important;
-  position: absolute !important;
-} */
-.swiper-pagination-bullet{
-background-color: blue !important;
+
+.swiper-pagination-bullet {
+  background-color: blue !important;
+  opacity: 0.65 !important;
 }
-.swiper-pagination-bullet-active{
-  background-color: rgb(26, 215, 26) !important;
-  opacity: 1;
+.swiper-pagination-bullet-active {
+  background-color: rgb(37, 245, 37) !important;
+  opacity: 1 !important;
 }
 .swiper-slide img {
-   display: block;
-   width: 100%; 
-   height: 100%; 
-   object-fit: cover; 
-  /**/
-  /* height: 80vh; */
-  /* background-position: center;
-  background-repeat: no-repeat; */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
