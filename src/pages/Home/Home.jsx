@@ -14,7 +14,7 @@ const Home = () => {
       <Category></Category>
           <Info></Info>
       <section className="flex flex-col justify-center items-center my-3 md:my-5">
-        <section className="w-4/5">
+        <section className="w-11/12 md:w-4/5">
           <FavouriteMenu></FavouriteMenu>
         </section>
       </section>

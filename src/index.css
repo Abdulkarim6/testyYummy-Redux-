@@ -16,18 +16,9 @@ a.active:hover{
   border-color: rgb(6, 211, 68) !important;
 }
 
-
 /* Featured component */
 .featured-item {
   background-image: url("./assets/home/featured.jpg");
-}
-
-/* Menu page */
-.MenuBanner {
-  background-image: url("./assets/menu/menu-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  width: 100%;
 }
 
 /* WelcomeArea component */
@@ -42,4 +33,45 @@ a.active:hover{
   border: 2px solid limegreen;
   background-position: bottom left;
   color: #fff;
+}
+
+/* MenuItem component */
+.zoomImg{
+  visibility: hidden;
+}
+.zoomImgShow:hover .smallImg{
+  border-radius: 200px 0px 200px 200px !important;
+  transition: all .2s ease-in;
+}
+.zoomImgShow:hover .zoomImg{
+  visibility: visible !important;
+  box-shadow: 0 20px 25px -10px;
+  margin-top: 20px !important;
+  transition: all 0.30s ease-in;
+}
+
+.zimg:hover{
+  transform: scale(1.25);
+}
+
+
+/* Menu page */
+.MenuBanner{
+  background-image: url("./assets/menu/menu-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.trnsc:hover .trns{
+transition: all .25s ease-in;
+}
+
+/* Menu card */
+.strMealThumb:hover h3{
+  /* visibility: hidden; */
+}
+.button:hover{
+  transition: all .2s linear;
 }

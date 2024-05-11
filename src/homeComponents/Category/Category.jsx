@@ -6,7 +6,7 @@ import "swiper/css/grid";
 import "./category.css";
 import { FreeMode, Pagination, Grid } from "swiper/modules";
 import SectionTitle from "../../utils/SectionTitle/SectionTitle";
-import { categoryImgs } from "./caregoryArray";
+import { categories } from "./caregoryArray";
 
 const Category = () => {
   return (
@@ -19,14 +19,14 @@ const Category = () => {
         <Swiper
           breakpoints={{
             320: {
-              slidesPerView: 2,
-              spaceBetween: 10,
+              slidesPerView: 3,
+              spaceBetween: 5,
               grid: { rows: 2 },
             },
             // when window width is >= 480px
             480: {
               slidesPerView: 3,
-              spaceBetween: 10,
+              spaceBetween: 8,
               grid: { rows: 2 },
             },
             // when window width is >= 640px
@@ -53,13 +53,13 @@ const Category = () => {
           modules={[Grid, FreeMode, Pagination]}
           className="mySwiper"
         >
-          {categoryImgs.map((category, i) => (
-            <SwiperSlide key={i} className="rounded-lg">
-              <img className="rounded" src={category?.categoryimg} alt="" />
-              <h3 className="text-2xl mt-7 text-slate-600 font-sans font-medium  uppercase">
-                {category?.title}
+          {categories.map((category, i) => (
+            <SwiperSlide key={i} className="rounded-lg border-2 border-solid border-slate-300 ">
+              <img className="rounded zimg transition-all duration-500 ease-in hover:z-20" src={category?.categoryimg} alt="" />
+              <h3 className="text-base md:text-xl lg:text-2xl mt-7 text-slate-600 font-sans font-medium  uppercase">
+                {category?.category}
               </h3>
-            </SwiperSlide>
+           </SwiperSlide>
           ))}
         </Swiper>
       </div>

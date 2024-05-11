@@ -7,16 +7,17 @@ import MenuItem from "./MenuItem";
 import SectionTitle from "../../utils/SectionTitle/SectionTitle";
 
 const FavouriteMenu = () => {
-  const [menuReviews] = useMenu();
+  const [data] = useMenu();
+  // console.log(menuReviews);
   const [menus, setMenus] = useState([]);
 
   useEffect(() => {
-    if (menuReviews) {
-      setMenus(menuReviews[0]);
+    if (data) {
+      setMenus(data[0]);
     }
-  }, [menuReviews]);
+  }, [data]);
 
-  const popularMenus = menus?.filter((menu) => menu.category === "popular");
+  const popularMenus = menus?.filter((menu) => menu.item === "special");
 
   useEffect(() => {
     AOS.init();
@@ -34,8 +35,8 @@ const FavouriteMenu = () => {
         ></SectionTitle>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {popularMenus?.map((popularMenus, i) => (
-            <MenuItem key={i} popularMenus={popularMenus}></MenuItem>
+          { popularMenus?.map((popularMenu, i) => (
+            <MenuItem key={i} popularMenu={popularMenu}></MenuItem>
           ))}
         </div>
       </div>

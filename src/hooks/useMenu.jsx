@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 
 const useMenu = () => {
   const [loading, setLoading] = useState(true);
-  const [menuReviews, setMenuReviews] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("menu.json")
+    fetch("shortMeal.json")
       .then((res) => res.json())
       .then((data) => {
-        setMenuReviews(data);
+        setData(data);
         setLoading(false);
       });
   }, [loading]);
-  return [menuReviews];
+  return [data];
 };
 
 export default useMenu;
