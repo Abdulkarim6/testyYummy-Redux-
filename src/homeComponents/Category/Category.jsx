@@ -34,12 +34,7 @@ const Category = () => {
               slidesPerView: 4,
               spaceBetween: 10,
               grid: { rows: 2 },
-            },
-            1000: {
-              slidesPerView: 5,
-              spaceBetween: 10,
-              grid: { rows: 2 },
-            },
+            }
           }}
           // slidesPerView={5}
           // grid={{
@@ -54,8 +49,8 @@ const Category = () => {
           className="mySwiper"
         >
           {categories.map((category, i) => (
-            <SwiperSlide key={i} className="rounded-lg border-2 border-solid border-slate-300 ">
-              <img className="rounded zimg transition-all duration-500 ease-in hover:z-20" src={category?.categoryimg} alt="" />
+            <SwiperSlide key={i} className="rounded-lg border-2 border-solid border-slate-300 z-0 hover:z-50">
+              <img className="rounded zimg transition-all duration-500 ease-in" src={category?.categoryimg} alt="" />
               <h3 className="text-base md:text-xl lg:text-2xl mt-7 text-slate-600 font-sans font-medium  uppercase">
                 {category?.category}
               </h3>

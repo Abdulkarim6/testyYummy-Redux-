@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MenuCard = ({menu}) => {
     const {strMeal, strMealThumb, idMeal, price} = menu;
 
@@ -20,7 +22,7 @@ const MenuCard = ({menu}) => {
          <h2 className="card-title">{strMeal}</h2>
         }
         <div className="card-actions justify-between">
-            <button className={`button ${buttonCss}`}>View Details</button>
+            <Link to={`/food-menu/${idMeal}/${price}`}><button className={`button ${buttonCss}`}>View Details</button></Link>
             <button className={`button ${buttonCss}`}>ADD TO CART</button>
         </div>
       </div>

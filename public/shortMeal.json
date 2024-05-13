@@ -10,14 +10,14 @@
         {
             "category": "Beef",
             "strMeal": "Beef and Oyster pie",
-            "price": 20,
+            "price": 23,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/wrssvt1511556563.jpg",
             "idMeal": "52878"
         },
         {
             "category": "Beef",
             "strMeal": "Beef Asado",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/pkopc31683207947.jpg",
             "idMeal": "53071"
         },
@@ -38,7 +38,7 @@
         {
             "category": "Beef",
             "strMeal": "Beef Mechado",
-            "price": 20,
+            "price": 28,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/cgl60b1683206581.jpg",
             "idMeal": "53068"
         },
@@ -59,7 +59,7 @@
         {
             "category": "Beef",
             "strMeal": "Beef Sunday Roast",
-            "price": 20,
+            "price": 23,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/ssrrrs1503664277.jpg",
             "idMeal": "52824"
         },
@@ -82,7 +82,7 @@
         {
             "category": "Beef",
             "strMeal": "Bistek",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/4pqimk1683207418.jpg",
             "idMeal": "53069"
         },
@@ -96,7 +96,7 @@
         {
             "category": "Chicken",
             "strMeal": "Brown Stew Chicken",
-            "price": 20,
+            "price": 33,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg",
             "idMeal": "52940"
         },
@@ -117,7 +117,7 @@
         {
             "category": "Chicken",
             "strMeal": "Chicken Couscous",
-            "price": 20,
+            "price": 22,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg",
             "idMeal": "52850"
         },
@@ -131,7 +131,7 @@
         {
             "category": "Chicken",
             "strMeal": "Chicken Karaage",
-            "price": 20,
+            "price": 26,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg",
             "idMeal": "52831"
         },
@@ -145,7 +145,7 @@
         {
             "category": "Chicken",
             "strMeal": "Chicken Parmentier",
-            "price": 20,
+            "price": 24,
             "item": "special",
             "strCategoryDescription": "Chicken is a type of domesticated fowl, a subspecies of the red junglefowl. It is one of the most common and widespread domestic animals, with a total population of more than 19 billion as of 2011.[1] Humans commonly keep chickens as a source of food (consuming both their meat and eggs) and, more rarely, as pets.",
             "strMealThumb": "https://www.themealdb.com/images/media/meals/uwvxpv1511557015.jpg",
@@ -161,7 +161,7 @@
         {
             "category": "Chicken",
             "strMeal": "Coq au vin",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/qstyvs1505931190.jpg",
             "idMeal": "52832"
         },
@@ -175,7 +175,7 @@
         {
             "category": "Dessert",
             "strMeal": "Apam balik",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
             "idMeal": "53049"
         },
@@ -196,7 +196,7 @@
         {
             "category": "Dessert",
             "strMeal": "Battenberg Cake",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/ywwrsp1511720277.jpg",
             "idMeal": "52894"
         },
@@ -210,7 +210,7 @@
         {
             "category": "Dessert",
             "strMeal": "Blackberry Fool",
-            "price": 20,
+            "price": 15,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/rpvptu1511641092.jpg",
             "idMeal": "52891"
         },
@@ -231,21 +231,21 @@
         {
             "category": "Dessert",
             "strMeal": "Chelsea Buns",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/vqpwrv1511723001.jpg",
             "idMeal": "52898"
         },
         {
             "category": "Dessert",
             "strMeal": "Chinon Apple Tarts",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/qtqwwu1511792650.jpg",
             "idMeal": "52910"
         },
         {
             "category": "Dessert",
             "strMeal": "Choc Chip Pecan Pie",
-            "price": 20,
+            "price": 25,
             "item": "special",
             "strCategoryDescription": "Dessert is a course that concludes a meal. The course usually consists of sweet foods, such as confections dishes or fruit, and possibly a beverage such as dessert wine or liqueur, however in the United States it may include coffee, cheeses, nuts, or other savory items regarded as a separate course elsewhere.",
             "strMealThumb": "https://www.themealdb.com/images/media/meals/rqvwxt1511384809.jpg",
@@ -254,7 +254,7 @@
         {
             "category": "Dessert",
             "strMeal": "Chocolate Gateau",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/tqtywx1468317395.jpg",
             "idMeal": "52776"
         },
@@ -269,7 +269,7 @@
             "category": "Pork",
             "item": "special",
             "strMeal": "Bigos (Hunters Stew)",
-            "price": 20,
+            "price": 30,
             "strCategoryDescription": "Pork is the culinary name for meat from a domestic pig (Sus scrofa domesticus). It is the most commonly consumed meat worldwide,[1] with evidence of pig husbandry dating back to 5000 BC. Pork is eaten both freshly cooked and preserved. Curing extends the shelf life of the pork products. Ham, smoked pork, gammon, bacon and sausage are examples of preserved pork.",
             "strMealThumb": "https://www.themealdb.com/images/media/meals/md8w601593348504.jpg",
             "idMeal": "53018"
@@ -291,7 +291,7 @@
         {
             "category": "Pork",
             "strMeal": "Hot and Sour Soup",
-            "price": 20,
+            "price": 35,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1529445893.jpg",
             "idMeal": "52954"
         },
@@ -305,7 +305,7 @@
         {
             "category": "Pork",
             "strMeal": "Pork Cassoulet",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/wxuvuv1511299147.jpg",
             "idMeal": "52847"
         },
@@ -319,7 +319,7 @@
         {
             "category": "Pork",
             "strMeal": "Toad In The Hole",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/ytuvwr1503070420.jpg",
             "idMeal": "52822"
         },
@@ -333,14 +333,14 @@
         {
             "category": "Pork",
             "strMeal": "Tourtiere",
-            "price": 20,
+            "price": 15,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/ytpstt1511814614.jpg",
             "idMeal": "52926"
         },
         {
             "category": "Pork",
             "strMeal": "Wontons",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1525876468.jpg",
             "idMeal": "52948"
         },
@@ -363,7 +363,7 @@
         {
             "category": "Seafood",
             "strMeal": "Fish fofos",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg",
             "idMeal": "53043"
         },
@@ -377,14 +377,14 @@
         {
             "category": "Seafood",
             "strMeal": "Fish Soup (Ukha)",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/7n8su21699013057.jpg",
             "idMeal": "53079"
         },
         {
             "category": "Seafood",
             "strMeal": "Garides Saganaki",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/wuvryu1468232995.jpg",
             "idMeal": "52764"
         },
@@ -405,14 +405,14 @@
         {
             "category": "Seafood",
             "strMeal": "Kung Po Prawns",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1525873040.jpg",
             "idMeal": "52946"
         },
         {
             "category": "Seafood",
             "strMeal": "Nasi lemak",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg",
             "idMeal": "53051"
         },
@@ -426,14 +426,14 @@
         {
             "category": "Seafood",
             "strMeal": "Salmon Prawn Risotto",
-            "price": 20,
+            "price": 15,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/xxrxux1503070723.jpg",
             "idMeal": "52823"
         },
         {
             "category": "Vegetarian",
             "strMeal": "Baingan Bharta",
-            "price": 20,
+            "price": 18,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
             "idMeal": "52807"
         },
@@ -454,7 +454,7 @@
         {
             "category": "Vegetarian",
             "strMeal": "Egg Drop Soup",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1529446137.jpg",
             "idMeal": "52955"
         },
@@ -475,7 +475,7 @@
         {
             "category": "Vegetarian",
             "strMeal": "Ful Medames",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/lvn2d51598732465.jpg",
             "idMeal": "53025"
         },
@@ -489,7 +489,7 @@
         {
             "category": "Vegetarian",
             "strMeal": "Kafteji",
-            "price": 20,
+            "price": 15,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg",
             "idMeal": "52971"
         },
@@ -503,7 +503,7 @@
         {
             "category": "Vegetarian",
             "strMeal": "Leblebi Soup",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/x2fw9e1560460636.jpg",
             "idMeal": "52973"
         },
@@ -524,7 +524,7 @@
         {
             "category": "Breakfast",
             "strMeal": "Breakfast Potatoes",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1550441882.jpg",
             "idMeal": "52965"
         },
@@ -538,7 +538,7 @@
         {
             "category": "Breakfast",
             "strMeal": "Fruit and Cream Cheese Breakfast Pastries",
-            "price": 20,
+            "price": 18,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1543774956.jpg",
             "idMeal": "52957"
         },
@@ -552,7 +552,7 @@
         {
             "category": "Breakfast",
             "strMeal": "Home-made Mandazi",
-            "price": 20,
+            "price": 15,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/thazgm1555350962.jpg",
             "idMeal": "52967"
         },
@@ -567,7 +567,7 @@
             "category": "Breakfast",
             "item": "special",
             "strMeal": "Smoked Haddock Kedgeree",
-            "price": 20,
+            "price": 30,
             "strCategoryDescription": "Breakfast is the first meal of a day. The word in English refers to breaking the fasting period of the previous night. There is a strong likelihood for one or more \"typical\", or \"traditional\", breakfast menus to exist in most places, but their composition varies widely from place to place, and has varied over time, so that globally a very wide range of preparations and ingredients are now associated with breakfast.",
             "strMealThumb": "https://www.themealdb.com/images/media/meals/1550441275.jpg",
             "idMeal": "52964"
@@ -582,7 +582,7 @@
         {
             "category": "Pasta",
             "strMeal": "Fettuccine Alfredo",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/0jv5gx1661040802.jpg",
             "idMeal": "53064"
         },
@@ -610,7 +610,7 @@
         {
             "category": "Pasta",
             "strMeal": "Lasagne",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg",
             "idMeal": "52844"
         },
@@ -624,14 +624,14 @@
         {
             "category": "Pasta",
             "strMeal": "Spaghetti alla Carbonara",
-            "price": 20,
+            "price": 35,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg",
             "idMeal": "52982"
         },
         {
             "category": "Pasta",
             "strMeal": "Venetian Duck Ragu",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/qvrwpt1511181864.jpg",
             "idMeal": "52838"
         },
@@ -652,7 +652,7 @@
         {
             "category": "Lamb",
             "strMeal": "Lamb and Potato pie",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/sxrpws1511555907.jpg",
             "idMeal": "52877"
         },
@@ -673,7 +673,7 @@
         {
             "category": "Lamb",
             "strMeal": "Lamb Rogan josh",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/vvstvq1487342592.jpg",
             "idMeal": "52808"
         },
@@ -687,7 +687,7 @@
         {
             "category": "Lamb",
             "strMeal": "Lamb Tzatziki Burgers",
-            "price": 20,
+            "price": 35,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/k420tj1585565244.jpg",
             "idMeal": "53010"
         },
@@ -701,7 +701,7 @@
         {
             "category": "Lamb",
             "strMeal": "McSinghs Scotch pie",
-            "price": 20,
+            "price": 25,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/vssrtx1511557680.jpg",
             "idMeal": "52880"
         },
@@ -715,7 +715,7 @@
         {
             "category": "Lamb",
             "strMeal": "Tunisian Lamb Soup",
-            "price": 20,
+            "price": 30,
             "strMealThumb": "https://www.themealdb.com/images/media/meals/t8mn9g1560460231.jpg",
             "idMeal": "52972"
         }

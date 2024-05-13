@@ -50,11 +50,6 @@ a.active:hover{
   transition: all 0.30s ease-in;
 }
 
-.zimg:hover{
-  transform: scale(1.25);
-}
-
-
 /* Menu page */
 .MenuBanner{
   background-image: url("./assets/menu/menu-bg.jpg");

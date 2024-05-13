@@ -1,5 +1,4 @@
 const MenuItem = ({ popularMenu }) => {
-  console.log(popularMenu);
   const { strMealThumb, category, price, strCategoryDescription, idMeal } = popularMenu;
   return (
     <section className="relative zoomImgShow">
