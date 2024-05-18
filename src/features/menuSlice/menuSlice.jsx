@@ -9,11 +9,12 @@ export const menuSlice = createSlice({
   initialState,
   reducers: {
     categoryFilter: (state, action) => {
-      if(!state.selectedCategory.includes(action.payload)){
-        state.selectedCategory.push(action.payload)
-      } else {
-        state.selectedCategory = state.selectedCategory.filter(category => category !== action.payload)
-      }
+      // if(!state.selectedCategory.includes(action.payload)){
+      //   state.selectedCategory.push(action.payload)
+      // } else {
+      //   state.selectedCategory = state.selectedCategory.filter(category => category !== action.payload)
+      // }
+      state.selectedCategory = action.payload
     },
   },
 });
