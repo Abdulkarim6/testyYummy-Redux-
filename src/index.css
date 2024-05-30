@@ -7,12 +7,15 @@ body {
 }
 
 /* Navber Link */
-a.active{
+.navLi span{
+  background-color: transparent !important;
+}
+.navLi a.active li{
   color: rgb(6, 211, 68) !important;
 }
 
-a.active:hover{
-  border-width: 2px !important;
+.navLi a.active:hover li{
+  border-width: 1px;
   border-color: rgb(6, 211, 68) !important;
 }
 
@@ -70,3 +73,10 @@ transition: all .25s ease-in;
 .button:hover{
   transition: all .2s linear;
 }
+/* cart */
+/* #borderimg1 {
+  margin: 10px 0;
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("./assets/dashboard/border.png") 30 stretch;
+} */

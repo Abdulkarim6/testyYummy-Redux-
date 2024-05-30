@@ -1,9 +1,27 @@
+import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
+import toast from 'react-hot-toast';
+import { useAddToCartMutation } from "../../features/api/cartApi";
+import { useEffect } from "react";
 
 const MenuCard = ({menu}) => {
-    const {strMeal, strMealThumb, idMeal, price} = menu;
-
     const buttonCss = "border border-solid border-blue-500 p-2 text-blue-600 font-semibold rounded hover:bg-info hover:text-black"
+    const {strMeal, strMealThumb, idMeal, price} = menu;
+    const menuDetail = {strMeal, strMealThumb, idMeal, price, quantity : 1}
+   
+    const [addToCart, {isSuccess, data}] = useAddToCartMutation()
+
+    useEffect(()=>{
+       if(isSuccess && data?.successMessage === "you added this food."){
+        toast.success(data?.successMessage, {id : "addToCart"})
+      }
+    },[isSuccess, data?.successMessage])
+
+      useEffect(() => {
+        AOS.init();
+      }, [])
 
   return (
     <div className="card card-compact w-[360px] h-[380px] shadow-lg rounded-none border border-solid border-gray-300 hover:border-black">
@@ -23,9 +41,22 @@ const MenuCard = ({menu}) => {
         }
         <div className="card-actions justify-between">
             <Link to={`/food-menu/${idMeal}/${price}`}><button className={`button ${buttonCss}`}>View Details</button></Link>
-            <button className={`button ${buttonCss}`}>ADD TO CART</button>
+            {
+              data?.message ? 
+              <button disabled className={`button ${buttonCss}`}>ADD TO CART</button>
+              :
+              <button onClick={()=> addToCart(menuDetail)} className={`button ${buttonCss}`}>ADD TO CART</button>
+            }
         </div>
       </div>
+         {
+           data?.warningMessage &&
+           <p
+              data-aos="fade-up"
+              data-aos-duration="1000" 
+              className="absolute top-0 text-lg md:text-xl md:font-medium text-blue-500 bg-white p-px"
+            >*{data?.warningMessage}</p>
+         }
     </div>
   );
 };

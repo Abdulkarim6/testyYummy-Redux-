@@ -5,14 +5,14 @@ const useMenu = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("shortMeal.json")
+    fetch("/shortMeal.json")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
         setLoading(false);
       });
   }, [loading]);
-  return [data];
+  return [data, loading];
 };
 
 export default useMenu;

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import toast from 'react-hot-toast';
 import { useLoaderData, useLocation } from "react-router-dom";
 import { useAddToCartMutation } from "../../features/api/cartApi";
 
@@ -13,10 +14,15 @@ const MenuDatail = () => {
 
     const menu = useLoaderData();
     const {strMeal, strMealThumb, idMeal, strInstructions, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10} = menu.meals[0];
-    const menuDetail = {strMeal, strMealThumb, idMeal, price : menuPrice, quantity : 5}
+    const menuDetail = {strMeal, strMealThumb, idMeal, price : menuPrice, quantity : 1}
    
-    const [addToCart, {isLoading, isSuccess, isError}] = useAddToCartMutation();
-    console.log(isLoading, isSuccess, isError);
+    const [addToCart, {isSuccess, data}] = useAddToCartMutation();
+
+    useEffect(()=>{
+      if(isSuccess && data?.successMessage === "you added this food."){
+       toast.success(data?.successMessage, {id : "addToCart"})
+     }
+   },[isSuccess, data?.successMessage])
    
     const buttonCss ="border border-solid border-blue-500 p-2 text-blue-600 font-semibold rounded hover:bg-info hover:text-black"
 
@@ -48,7 +54,11 @@ const MenuDatail = () => {
                 <button onClick={()=> addToCart(menuDetail)} className={`button ${buttonCss}`}>ADD TO CART</button>
                 <h3 className="text-xl md:text-2xl font-semibold ml-2 border border-solid border-blue-500 p-0.5">Price: ${menuPrice}.00</h3>
               </div>
-           </div>
+              {
+                data?.warningMessage &&
+                <p className="text-lg md:text-xl md:font-medium text-blue-500">*{data?.warningMessage}</p>
+              }
+            </div>
         </section>
     );
 };
