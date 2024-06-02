@@ -6,7 +6,7 @@ import "swiper/css/grid";
 import "./category.css";
 import { FreeMode, Pagination, Grid } from "swiper/modules";
 import SectionTitle from "../../utils/SectionTitle/SectionTitle";
-import { categories } from "./caregoryArray";
+import { categories } from "../../utils/arrays";
 
 const Category = () => {
   return (

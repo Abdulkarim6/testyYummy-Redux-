@@ -1,5 +1,5 @@
 const MenuItem = ({ popularMenu }) => {
-  const { strMealThumb, category, price, strCategoryDescription, idMeal } = popularMenu;
+  const { strMealThumb, category, price, strCategoryDescription } = popularMenu;
   return (
     <section className="relative zoomImgShow">
       <img className="zoomImg w-[290px] md:w-[300px] h-[270px] ml-[100px] object-cover absolute -top-[290px] z-10" src={strMealThumb} alt="" />

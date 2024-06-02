@@ -9,15 +9,15 @@ import { useEffect } from "react";
 const MenuCard = ({menu}) => {
     const buttonCss = "border border-solid border-blue-500 p-2 text-blue-600 font-semibold rounded hover:bg-info hover:text-black"
     const {strMeal, strMealThumb, idMeal, price} = menu;
-    const menuDetail = {strMeal, strMealThumb, idMeal, price, quantity : 1}
+    const menuDetail = {strMeal, strMealThumb, idMeal, price, quantity : 1, checked : true}
    
-    const [addToCart, {isSuccess, data}] = useAddToCartMutation()
+    const [addToCart, {isSuccess, data, requestId}] = useAddToCartMutation()
 
     useEffect(()=>{
        if(isSuccess && data?.successMessage === "you added this food."){
-        toast.success(data?.successMessage, {id : "addToCart"})
+        toast.success(data?.successMessage, {id : requestId})
       }
-    },[isSuccess, data?.successMessage])
+    },[isSuccess, data?.successMessage, requestId])
 
       useEffect(() => {
         AOS.init();

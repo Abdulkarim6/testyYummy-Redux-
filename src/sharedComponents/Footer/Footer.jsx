@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="grid grid-cols-2 justify-items-center sticky top-[100vh] p-10 bg-neutral text-neutral-content">
+    <footer className="grid md:grid-cols-2 md:justify-items-center sticky top-[100vh] p-10 bg-neutral text-neutral-content">
       <nav>
          <h2 className="text-xl md:text-2xl">Contact Us</h2>
          <div className="text-base font-medium mt-3">
@@ -13,7 +13,7 @@ const Footer = () => {
          </div>
       </nav>
 
-      <nav>
+      <nav className="mt-3 md:mt-0">
            <h2 className="text-xl md:text-2xl">Follow Us</h2>
               <h4 className="text-lg md:text-xl">Join us on social networks</h4>
            <div className="text-base font-medium mt-3">

@@ -16,6 +16,14 @@ const cartApi = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ["Cart"],
     }),
+    menuCheckedToggle : builder.mutation({
+      query : (data) =>({
+        url : "CheckedToggle",
+        method : "PUT",
+        body : data
+      }),
+      invalidatesTags: ["Cart"],
+    }),
     updateMenuQuantity : builder.mutation({
       //here data is specific id and quantity which is must be wrap an object for send with as body
       query : (data) => ({
@@ -38,6 +46,7 @@ const cartApi = apiSlice.injectEndpoints({
 export const {
   useGetmyCartMenusQuery,
   useAddToCartMutation,
+  useMenuCheckedToggleMutation,
   useUpdateMenuQuantityMutation,
   useDeleteFromCartMutation
 } = cartApi;

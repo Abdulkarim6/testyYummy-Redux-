@@ -3,8 +3,9 @@ import { useGetmyCartMenusQuery } from "../../features/api/cartApi";
 import useTotalPriceCalculate from "../../hooks/useTotalPriceCalculate";
 
 const Checkout = () => {
-    const result = useTotalPriceCalculate();
     const { data } = useGetmyCartMenusQuery();
+    const seletedDataForOrder = data?.filter(item => item.checked === true);
+    const result = useTotalPriceCalculate();
 
     const handleSubmit = (event) =>{{
         event.preventDefault();
@@ -30,7 +31,7 @@ const Checkout = () => {
                     </tr>
                   </thead>
                   <tbody>
-                     {data?.map(
+                     {seletedDataForOrder?.map(
                       ({ _id, idMeal, strMeal, quantity, price }) => (
                         <tr key={_id} className="hover text-lg font-medium">
                           <th className="text-base text-blue-500 md:text-lg underline pl-2 pr-0 py-0">
@@ -55,43 +56,74 @@ const Checkout = () => {
                 </table>
               </div>
               <div className="flex justify-end mt-5 mb-3 mr-2 md:mr-10">
-                  <p className="md:text-2xl text-blue-500 font-semibold border border-blue-500 rounded p-1">Total : ${result}</p>
+                  <p className="md:text-2xl text-blue-500 font-semibold border border-blue-500 rounded p-1">Total Price : ${result}</p>
                </div>
             </div>
 
             <div className="md:w-2/5">
                <h2 className="text-lg md:text-2xl text-center uppercase font-semibold italic border-indigo-500 border-b-2 py-2 mt-1 md:mt-3">Billing details</h2>
-               <div>
-               <form onSubmit={handleSubmit} className="card-body py-3">
+               <h2 className="text-base uppercase font-semibold italic pl-8 py-1 mt-1 md:mt-3">Name : </h2>
+               <h2 className="text-base uppercase font-semibold italic pl-8 pt-1">Email : </h2>
+                
+                
+                <form onSubmit={handleSubmit} className="card-body py-3">
                     <div className="form-control">
                       <label className="label py-0">
-                        <span className="label-text">Name</span>
+                        <span className="label-text">Address:</span>
                       </label>
-                      <input type="text" name="name" placeholder="your name" className="input input-bordered" required />
+                      <input type="text" name="address" placeholder="address" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                       <label className="label py-0">
-                        <span className="label-text">Email</span>
+                        <span className="label-text">Number:</span>
                       </label>
-                      <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                      <input type="text" name="number" placeholder="number" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                       <label className="label py-0">
-                        <span className="label-text">Password</span>
+                        <span className="label-text">Order notes (optional):</span>
                       </label>
-                      <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                      <label className="label py-0">
-                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                      </label>
+                      <textarea type="text" name="text" placeholder="text" className="textarea textarea-bordered"></textarea>
                     </div>
                     <div className="form-control mt-6">
-                      <button type="submit" className="btn btn-primary">Login</button>
+                      <button type="submit" className="btn btn-primary">Place Order</button>
                     </div>
-                  </form>
-               </div>
+                </form>
             </div>
         </section>
     );
 };
 
 export default Checkout;
+
+
+
+
+
+
+// <form onSubmit={handleSubmit} className="card-body py-3">
+//                     <div className="form-control">
+//                       <label className="label py-0">
+//                         <span className="label-text">Name</span>
+//                       </label>
+//                       <input type="text" name="name" placeholder="your name" className="input input-bordered" required />
+//                     </div>
+//                     <div className="form-control">
+//                       <label className="label py-0">
+//                         <span className="label-text">Email</span>
+//                       </label>
+//                       <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+//                     </div>
+//                     <div className="form-control">
+//                       <label className="label py-0">
+//                         <span className="label-text">Password</span>
+//                       </label>
+//                       <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+//                       <label className="label py-0">
+//                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+//                       </label>
+//                     </div>
+//                     <div className="form-control mt-6">
+//                       <button type="submit" className="btn btn-primary">Login</button>
+//                     </div>
+//                   </form>

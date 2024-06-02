@@ -14,7 +14,7 @@ const MenuDatail = () => {
 
     const menu = useLoaderData();
     const {strMeal, strMealThumb, idMeal, strInstructions, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10} = menu.meals[0];
-    const menuDetail = {strMeal, strMealThumb, idMeal, price : menuPrice, quantity : 1}
+    const menuDetail = {strMeal, strMealThumb, idMeal, price : menuPrice, quantity : 1, checked : true}
    
     const [addToCart, {isSuccess, data}] = useAddToCartMutation();
 

@@ -1,5 +1,5 @@
 import { categoryFilter } from "../../features/menuSlice/menuSlice";
-import { categories } from "../../homeComponents/Category/caregoryArray";
+import { categories } from "../../utils/arrays";
 import { useDispatch, useSelector } from "react-redux";
 import useMenu from "../../hooks/useMenu";
 import { useEffect, useState } from "react";
