@@ -1,14 +1,13 @@
-import 'animate.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
 import useMenu from "../../hooks/useMenu";
 import MenuItem from "./MenuItem";
 import SectionTitle from "../../utils/SectionTitle/SectionTitle";
+import useAnimate from '../../hooks/useAnimate';
 
 const FavouriteMenu = () => {
+  const {props} = useAnimate();
+  const fadeUp = props?.children[0]?.props;
   const [data] = useMenu();
-  // console.log(menuReviews);
   const [menus, setMenus] = useState([]);
 
   useEffect(() => {
@@ -19,14 +18,9 @@ const FavouriteMenu = () => {
 
   const popularMenus = menus?.filter((menu) => menu.item === "special");
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
-
   return (
     <section
-    data-aos="fade-up"
-    data-aos-duration="1500"
+    {...fadeUp}
     className="mb-5">
       <div className="flex flex-col justify-center items-center ">
         <SectionTitle

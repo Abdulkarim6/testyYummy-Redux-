@@ -30,8 +30,9 @@ const Navber = () => {
     <>
      
       <NavLink to='/'><li className={`${classStyle} mb-3 md:mb-0 min-w-min	`}>Home</li></NavLink>
-      <NavLink to='/food-menu'><li className={`${classStyle} mb-3 md:mb-0`}>Our-Menu</li></NavLink>
+      <NavLink to='/food-menu'><li className={`${classStyle} mb-3 md:mb-0`}>Menu</li></NavLink>
       <NavLink to='/contact'><li className={`${classStyle} mb-3 md:mb-0`}>Contact</li></NavLink>
+      <NavLink to='/reservation'><li className={`${classStyle} mb-3 md:mb-0`}>Reservation</li></NavLink>
       <NavLink to='/my-cart'><li className={`${classStyle} mb-3 md:mb-0`}>
               <span className="absolute left-8 md:left-7 bottom-8 md:bottom-3">{data?.length}</span>
               <FontAwesomeIcon icon={faCartPlus} /></li>

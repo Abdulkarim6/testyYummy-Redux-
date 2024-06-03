@@ -1,4 +1,4 @@
-const ContactBanner = () => {
+const BannerShare = ({title, subTitle}) => {
   return (
     <section className="relative flex flex-col justify-center items-center">
       {/* bg img position set */}
@@ -8,16 +8,16 @@ const ContactBanner = () => {
       </div>
 
       {/* title and text position set */}
-       <div className="absolute top-auto left-auto flex flex-col items-center justify-center w-4/5 md:w-3/5 h-4/5 md:h-4/5 rounded font-medium p-2 md:p-5">
+      <div className="absolute top-auto left-auto flex flex-col items-center justify-center w-4/5 md:w-3/5 h-4/5 md:h-4/5 rounded font-medium p-2 md:p-5">
         <h3 className="text-3xl md:text-4xl text-black font-bold uppercase">
-          Contact with us
+          {title}
         </h3>
         <p className="text-xl text-black mt-5 font-semibold">
-          if you want contact with us please send us a message.
+          {subTitle}
         </p>
       </div>
     </section>
   );
 };
 
-export default ContactBanner;
+export default BannerShare;

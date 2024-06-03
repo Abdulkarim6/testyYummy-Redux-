@@ -1,15 +1,10 @@
-import 'animate.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import useAnimate from "../../hooks/useAnimate";
 import SectionTitle from "../../utils/SectionTitle/SectionTitle";
-import { useEffect } from 'react';
 
 const ContactForm = () => {
-  const buttonCss = `border border-solid border-indigo-400 p-2
-    font-semibold rounded bg-indigo-400 hover:bg-indigo-500 text-lg md:text-xl text-black`
-  useEffect(() => {
-    AOS.init();
-  }, [])
+  const buttonCss = `border border-solid border-indigo-400 p-2 font-semibold rounded bg-indigo-400 hover:bg-indigo-500 text-lg md:text-xl text-black`
+  const {props} = useAnimate();
+  const fadeUp = props?.children[0]?.props;
 
   return (
     <section>
@@ -18,9 +13,8 @@ const ContactForm = () => {
         title="Contact Form"
       ></SectionTitle>
       <div
-      data-aos="fade-up"
-      data-aos-duration="1500"
-      className="bg-neutral mb-5 rounded">
+       {...fadeUp}
+       className="bg-neutral mb-5 rounded">
         <form className="card-body py-3">
           <div className="grid md:grid-cols-3 gap-2">
             <div className="form-control w-full">

@@ -6,6 +6,7 @@ import MenuDatail from "../menuComponents/ourMenu/MenuDatail";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../menuComponents/Checkout/Checkout";
 import ContactPage from "../pages/ContactPage/ContactPage";
+import Reservation from "../othersComponents/Reservation/Reservation";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage></ContactPage>
+      },
+      {
+        path: "/reservation",
+        element: <Reservation></Reservation>
       },
       {
         path: "/my-cart",

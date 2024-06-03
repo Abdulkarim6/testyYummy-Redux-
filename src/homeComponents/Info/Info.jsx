@@ -1,19 +1,14 @@
-import 'animate.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import "./info.css"
 import infoSideImg from "../../assets/welcomeImgs/infoSideImg1.jpg"
-import { useEffect } from "react";
+import useAnimate from "../../hooks/useAnimate";
 
 const Info = () => {
-    useEffect(() => {
-        AOS.init();
-      }, [])
+    const {props} = useAnimate();
+    const fadeUp = props?.children[0]?.props;
 
     return (
         <section
-              data-aos="fade-up"
-              data-aos-duration="1500"
+           {...fadeUp}
               className="grid grid-cols-1 md:grid-cols-2 justify-items-center items-center gap-5">
             <div >
                 <img className='rounded h-80 md:h-full' src={infoSideImg} alt="" />
