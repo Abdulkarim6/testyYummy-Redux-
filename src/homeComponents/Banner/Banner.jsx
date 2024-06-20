@@ -11,7 +11,7 @@ import img3 from "../../assets/banner/Dessert.jpg";
 import img4 from "../../assets/banner/Breakfast.jpg";
 import img5 from "../../assets/banner/Vegetarian.jpg";
 
-const saveimgs  = [img1,img2, img3, img4, img5]
+const carouselimgs  = [img1,img2, img3, img4, img5]
 
 
 const Banner = () => {
@@ -22,7 +22,7 @@ const Banner = () => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 100000, //2500
+          delay: 2500, //2500
           disableOnInteraction: false,
         }}
         pagination={{
@@ -33,7 +33,7 @@ const Banner = () => {
         // className="h-[44vh] md:h-[60vh] lg:h-[94vh]"
       >
 
-        {saveimgs?.map((img, i) => (
+        {carouselimgs?.map((img, i) => (
           <SwiperSlide key={i}>
             <img src={img} alt="" />
           </SwiperSlide>

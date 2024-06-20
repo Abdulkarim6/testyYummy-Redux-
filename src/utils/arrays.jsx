@@ -27,7 +27,7 @@ export const categories = [
 export const infoData = [
   {
     icon: clock,
-    title: "open",
+    title: "opening hours",
     subTitle1: "Mon - Fri: 08:00 - 22:00",
     subTitle2: "Sat - Sun: 10:00 - 23:00",
   },
