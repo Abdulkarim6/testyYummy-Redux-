@@ -12,9 +12,14 @@ const initialState = {
 
 export const createUser = createAsyncThunk("auth/createUser",async ({ email, password }) => {
     const result = await createUserWithEmailAndPassword(auth, email, password);
-    return result.user.email;
+    return result?.user?.email;
   }
 );
+
+export const signInUser = createAsyncThunk("auth/signIn", async ({email, password}) => {
+    const result = await signInWithEmailAndPassword(auth, email, password);
+    return result?.user?.email;
+})
 
 const authSlice = createSlice({
   name: "auth",
@@ -22,6 +27,9 @@ const authSlice = createSlice({
   reducers : {
     setUser : (state, {payload}) => {
     state.userEmail = payload
+    },
+    logOutLocally : (state) => {
+      state.userEmail = ""
     }
   },
   extraReducers: (builder) => {
@@ -33,7 +41,7 @@ const authSlice = createSlice({
     })
     .addCase(createUser.fulfilled, (state, action) => {
         state.isLoading = false,
-        state.userEmail = action.payload.email,
+        state.userEmail = action.payload,
         state.isSuccess = true,
         state.isError = false,
         state.error = ''
@@ -43,9 +51,28 @@ const authSlice = createSlice({
         state.isSuccess = false,
         state.isError = true,
         state.error = action.error.message
+    })
+    .addCase(signInUser.pending, (state) => {
+        state.isLoading = true,
+        state.isSuccess = false,
+        state.isError = false,
+        state.error = ''
+    })
+    .addCase(signInUser.fulfilled, (state, action) => {
+        state.isLoading = false,
+        state.userEmail = action.payload,
+        state.isSuccess = true,
+        state.isError = false,
+        state.error = ''
+    })
+    .addCase(signInUser.rejected, (state, action) => {
+        state.isLoading = false,
+        state.isSuccess = false,
+        state.isError = true,
+        state.error = action.error.message
     });
   },
 });
 
-export const {setUser} = authSlice.actions;
+export const {setUser, logOutLocally} = authSlice.actions;
 export default authSlice.reducer;

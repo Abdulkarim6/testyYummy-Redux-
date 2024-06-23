@@ -4,12 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { HiMenu,HiX } from "react-icons/hi";
 import { useGetmyCartMenusQuery } from "../../features/api/cartApi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
+import { logOutLocally } from "../../features/authSlice/authSlice";
 
 
 const Navber = () => {
   const {userEmail} = useSelector(state => state.auth);
-  console.log(userEmail);
+  const dispatch = useDispatch();
   const {data } = useGetmyCartMenusQuery();
   let location = useLocation();
   let menuId = location?.pathname.slice(11, 30);
@@ -26,8 +29,15 @@ const Navber = () => {
     const handleSideNav = () =>{
         setSideNav(Current => !Current)
     }
-    const classStyle = `p-1 text-base md:text-lg lg:text-xl text-blue-400
-     rounded-md border border-transparent hover:border-blue-500 uppercase`
+
+    const handleSignOut = () =>{
+       signOut(auth).then(() =>{
+           dispatch(logOutLocally()) 
+        }).catch(() => {
+          // console.log(error);
+        });
+    }
+    const classStyle = `p-1 text-base md:text-lg lg:text-xl text-blue-400 rounded-md border border-transparent hover:border-blue-500 uppercase`
 
   const menu = (
     <>
@@ -42,8 +52,8 @@ const Navber = () => {
       </NavLink>
       {
         userEmail ?
-        <NavLink ><li className={`${classStyle} mb-3 md:mb-0`}>SingOut</li></NavLink>
-        :
+        <button type="button" onClick={() => handleSignOut()} ><li className={`${classStyle} mb-3 md:mb-0`}>SignOut</li></button>
+         :
         <NavLink to='/signIn'><li className={`${classStyle} mb-3 md:mb-0`}>SIGNIN</li></NavLink>
       }
       

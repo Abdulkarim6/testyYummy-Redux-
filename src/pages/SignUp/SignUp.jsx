@@ -8,7 +8,7 @@ import { createUser } from "../../features/authSlice/authSlice";
 const SignUp = () => {
   const dispatch = useDispatch()
   const {isLoading, isSuccess, isError, error} = useSelector(state => state.auth)
-  console.log(isLoading, isSuccess, isError, error);
+  // console.log(isLoading, isSuccess, isError, error);
 
     const handleSubmit = (event) =>{{
         event.preventDefault();

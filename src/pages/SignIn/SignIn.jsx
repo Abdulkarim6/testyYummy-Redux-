@@ -2,14 +2,21 @@ import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { authInput, authText, authlabel } from "../../utils/classes";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { signInUser } from "../../features/authSlice/authSlice";
 
 const SignIn = () => {
+  const {isLoading, isSuccess, isError, error} = useSelector(state => state.auth)
+  // console.log(isLoading, isSuccess, isError, error);
+  const dispatch = useDispatch();
+
     const handleSubmit = (event) =>{{
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log( email, password);
+        
+        dispatch(signInUser({email, password}))
     }}
 
 
