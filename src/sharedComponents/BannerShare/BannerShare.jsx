@@ -2,7 +2,7 @@ const BannerShare = ({title, subTitle}) => {
   return (
     <section className="relative flex flex-col justify-center items-center">
       {/* bg img position set */}
-      <div className="relative MenuBanner h-[250px] md:h-[400px] flex justify-center items-center rounded ">
+      <div className="relative BannerShare h-[250px] md:h-[400px] flex justify-center items-center rounded ">
         {/*backdrop position set */}
         <div className="absolute top-5 left-5 right-5 bottom-5 md:top-10 md:left-10 md:right-10 md:bottom-10 bg-green-100 opacity-40 "></div>
       </div>

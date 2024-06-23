@@ -21,7 +21,8 @@ body {
 
 /* Featured component */
 .featured-item {
-  background-image: url("./assets/home/featured.jpg");
+  background-image: url("./assets/home/featuredbgp.png");
+  background-position: center;
 }
 
 /* WelcomeArea component */
@@ -53,30 +54,37 @@ body {
   transition: all 0.30s ease-in;
 }
 
-/* Menu page */
-.MenuBanner{
-  background-image: url("./assets/banner/contact1.jpg");
+/* BannerShare component */
+.BannerShare{
+  background-image: url("./assets/authintication/2151479234.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
 }
-
+/* Menu page */
 .trnsc:hover .trns{
 transition: all .25s ease-in;
 }
 
 /* Menu card */
-.strMealThumb:hover h3{
-  /* visibility: hidden; */
-}
 .button:hover{
   transition: all .2s linear;
 }
-/* cart */
-/* #borderimg1 {
-  margin: 10px 0;
-  border: 10px solid transparent;
-  padding: 15px;
-  border-image: url("./assets/dashboard/border.png") 30 stretch;
-} */
+ 
+
+@media only screen and (max-width: 1024px) {
+  .signInBg{
+    background-image: url("./assets/authintication/45265.jpg");
+    background-repeat: inherit;
+    background-size: 100%;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .signInBg{
+    background-image: url("./assets/authintication/2151479234.jpg");
+    /* background-size: 100%; */
+    background-size: cover;
+    /* height: 100svh; */
+  }
+}

@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { HiMenu,HiX } from "react-icons/hi";
 import { useGetmyCartMenusQuery } from "../../features/api/cartApi";
+import { useSelector } from "react-redux";
 
 
 const Navber = () => {
+  const {userEmail} = useSelector(state => state.auth);
+  console.log(userEmail);
   const {data } = useGetmyCartMenusQuery();
   let location = useLocation();
   let menuId = location?.pathname.slice(11, 30);
@@ -23,13 +26,13 @@ const Navber = () => {
     const handleSideNav = () =>{
         setSideNav(Current => !Current)
     }
-    const classStyle = `p-1 text-base md:text-xl text-blue-400
+    const classStyle = `p-1 text-base md:text-lg lg:text-xl text-blue-400
      rounded-md border border-transparent hover:border-blue-500 uppercase`
 
   const menu = (
     <>
      
-      <NavLink to='/'><li className={`${classStyle} mb-3 md:mb-0 min-w-min	`}>Home</li></NavLink>
+      <NavLink to='/'><li className={`${classStyle} mb-3 md:mb-0 min-w-min`}>Home</li></NavLink>
       <NavLink to='/food-menu'><li className={`${classStyle} mb-3 md:mb-0`}>Menu</li></NavLink>
       <NavLink to='/contact'><li className={`${classStyle} mb-3 md:mb-0`}>Contact</li></NavLink>
       <NavLink to='/reservation'><li className={`${classStyle} mb-3 md:mb-0`}>Reservation</li></NavLink>
@@ -37,13 +40,19 @@ const Navber = () => {
               <span className="absolute left-8 md:left-7 bottom-8 md:bottom-3">{data?.length}</span>
               <FontAwesomeIcon icon={faCartPlus} /></li>
       </NavLink>
+      {
+        userEmail ?
+        <NavLink ><li className={`${classStyle} mb-3 md:mb-0`}>SingOut</li></NavLink>
+        :
+        <NavLink to='/signIn'><li className={`${classStyle} mb-3 md:mb-0`}>SIGNIN</li></NavLink>
+      }
       
       
     </>
   );
   return (
       <div className={navCss}>
-        <div className="navbar-start inline-block">
+        <div className="flex-start md:w-4/12 lg:w-6/12 inline-block">
               <div className="flex items-center">
                   {
                       sideNav ? 
@@ -68,7 +77,7 @@ const Navber = () => {
         </div>
       
   
-        <div className="navbar-end hidden md:flex">
+        <div className="navbar-end w-full hidden md:flex">
           <ul className="navLi menu menu-horizontal items-center">{menu}</ul>
         </div>
       </div>

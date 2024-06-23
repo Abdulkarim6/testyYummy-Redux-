@@ -7,6 +7,8 @@ import Cart from "../pages/Cart/Cart";
 import Checkout from "../menuComponents/Checkout/Checkout";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import Reservation from "../othersComponents/Reservation/Reservation";
+import SignIn from "../pages/SignIn/SignIn";
+import SignUp from "../pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-cart",
-        element: <Cart></Cart>,
+        element: <Cart></Cart>
+      },
+      {
+        path: "/signIn",
+        element: <SignIn></SignIn>
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>
       },
       {
         path: "/checkout",
